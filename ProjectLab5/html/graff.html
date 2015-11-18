@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Курсы наличных валют в Беларуси — Анализатор Валют</title>
+    <link rel="stylesheet" type="text/css" href="2.css">
+     
+</head>
+<body>
+<div id="container">
+
+  <div id="content">
+      <header>
+      <div id="topArea" class="topShadow">
+          <ul class="topmenu menuStyle" style="display: @none">
+              <a href="home_page.html">
+                  <li>Главная</li>
+              </a>
+              <a href="convert.html">
+                  <li>Конвертер</li>
+              </a>
+              <a href="allbank.html">
+                  <li>Курсы валют всех банков страны</li>
+              </a>
+              <a href="graff.html">
+                  <li>График</li>
+              </a>
+              <a href="inerbank.html">
+                  <li>Курсы междунарожного банка</li>
+              </a>
+
+          </ul>
+      </div>
+  </div>
+  </header>
+
+<div id="graphArea">
+
+    <div class="market graph">
+
+      <div class="tabs">
+          <div class="tab selected" currency="usd">USD</div>
+          <div class="tab" currency="eur">EUR</div>
+          <div class="tab" currency="rub">RUB</div>    
+      </div>
+
+      <div class="market canvas">
+          <div class="canvasWrapper">
+              <canvas id="usdGraph" class="usd" height="120" width="600"></canvas>
+              <canvas id="eurGraph" class="eur" height="120" width="600" style="visibility: hidden"></canvas>
+              <canvas id="rubGraph" class="rub" height="120" width="600" style="visibility: hidden"></canvas>        </div>
+      </div>
+
+      <div class="panel">
+
+          <div class="legend">
+              <div class="lineLabel">
+                  <div class="rectangle" style="background: #206AC5"></div>
+                  Покупка <span>USD</span>, руб            
+              </div>
+              <div class="lineLabel shifted">
+                  <div class="rectangle" style="background: #C52020"></div>
+                  Продажа <span>USD</span>, руб            
+              </div>
+          </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="market period">
+      <div class="preset" to="2015-11-17" from="2015-10-18">за месяц</div>
+      <div class="preset last" to="2015-11-17" from="2015-08-19">за 3 месяца</div>
+      <div class="preset last" to="2015-11-17" from="2015-05-21">за пол года</div>
+
+      <div class="calendarPanel">
+          с <input class="calendar from" type="date" name="calendar" value="2015-11-03">
+          по <input class="calendar to" type="date" name="calendar" value="2015-11-17">
+          <input id="formBtn" class="periodBtn" type="button" value="Показать">
+          <div class="graphMarketPreloader"></div>
+      </div>
+    </div>
+</body>
+</html>
